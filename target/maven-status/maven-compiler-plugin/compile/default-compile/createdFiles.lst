@@ -1,0 +1,5 @@
+nurd\dapper\slowerprogression\listeners\AttemptCraftListener.class
+nurd\dapper\slowerprogression\listeners\PlayerJoinListener.class
+nurd\dapper\slowerprogression\SlowerProgression.class
+nurd\dapper\slowerprogression\listeners\BlockBreakListener.class
+nurd\dapper\slowerprogression\listeners\MobDeathListener.class

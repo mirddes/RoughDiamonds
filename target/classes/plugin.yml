@@ -1,0 +1,5 @@
+name: SlowerProgression
+version: '1.0'
+main: nurd.dapper.slowerprogression.SlowerProgression
+api-version: '1.20'
+authors: [ DapperNurd ]

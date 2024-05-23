@@ -1,0 +1,5 @@
+name: SlowerProgression
+version: '${project.version}'
+main: nurd.dapper.slowerprogression.SlowerProgression
+api-version: '1.20'
+authors: [ DapperNurd ]
