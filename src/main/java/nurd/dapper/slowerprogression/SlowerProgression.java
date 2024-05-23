@@ -41,6 +41,20 @@ public final class SlowerProgression extends JavaPlugin {
             0.7f,
             200
     );
+    FurnaceRecipe ironOre = new FurnaceRecipe(
+            new NamespacedKey(this, "iron_ore"),
+            new ItemStack(Material.IRON_NUGGET, 1),
+            Material.IRON_ORE,
+            0.7f,
+            100
+    );
+    FurnaceRecipe deepIronOre = new FurnaceRecipe(
+            new NamespacedKey(this, "deep_iron_ore"),
+            new ItemStack(Material.IRON_NUGGET, 1),
+            Material.DEEPSLATE_IRON_ORE,
+            0.7f,
+            100
+    );
     // Gold
     FurnaceRecipe rawGold = new FurnaceRecipe(
             new NamespacedKey(this, "gold_nugget_furnace"),
@@ -55,6 +69,20 @@ public final class SlowerProgression extends JavaPlugin {
             Material.RAW_GOLD_BLOCK,
             0.7f,
             200
+    );
+    FurnaceRecipe goldOre = new FurnaceRecipe(
+            new NamespacedKey(this, "gold_ore"),
+            new ItemStack(Material.GOLD_NUGGET, 1),
+            Material.GOLD_ORE,
+            0.7f,
+            100
+    );
+    FurnaceRecipe deepGoldOre = new FurnaceRecipe(
+            new NamespacedKey(this, "deep_gold_ore"),
+            new ItemStack(Material.GOLD_NUGGET, 1),
+            Material.DEEPSLATE_GOLD_ORE,
+            0.7f,
+            100
     );
 
     // Blast Furnace Recipes ///////
@@ -73,6 +101,20 @@ public final class SlowerProgression extends JavaPlugin {
             0.7f,
             100
     );
+    BlastingRecipe ironOre_Blast = new BlastingRecipe(
+            new NamespacedKey(this, "iron_ore_blast"),
+            new ItemStack(Material.IRON_NUGGET, 1),
+            Material.IRON_ORE,
+            0.7f,
+            100
+    );
+    BlastingRecipe deepIronOre_Blast = new BlastingRecipe(
+            new NamespacedKey(this, "deep_iron_ore_blast"),
+            new ItemStack(Material.IRON_NUGGET, 1),
+            Material.DEEPSLATE_IRON_ORE,
+            0.7f,
+            100
+    );
     // Gold
     BlastingRecipe rawGold_Blast = new BlastingRecipe(
             new NamespacedKey(this, "gold_nugget_blast"),
@@ -87,6 +129,20 @@ public final class SlowerProgression extends JavaPlugin {
             Material.RAW_GOLD_BLOCK,
             0.7f,
             200
+    );
+    BlastingRecipe goldOre_Blast = new BlastingRecipe(
+            new NamespacedKey(this, "gold_ore_blast"),
+            new ItemStack(Material.GOLD_NUGGET, 1),
+            Material.GOLD_ORE,
+            0.7f,
+            100
+    );
+    BlastingRecipe deepGoldOre_Blast = new BlastingRecipe(
+            new NamespacedKey(this, "deep_gold_ore_blast"),
+            new ItemStack(Material.GOLD_NUGGET, 1),
+            Material.DEEPSLATE_GOLD_ORE,
+            0.7f,
+            100
     );
 
     // Misc Recipes
@@ -126,10 +182,18 @@ public final class SlowerProgression extends JavaPlugin {
         getServer().addRecipe(rawIron_Blast);
         getServer().addRecipe(rawIronBlock);
         getServer().addRecipe(rawIronBlock_Blast);
+        getServer().addRecipe(ironOre);
+        getServer().addRecipe(ironOre_Blast);
+        getServer().addRecipe(deepIronOre);
+        getServer().addRecipe(deepIronOre_Blast);
         getServer().addRecipe(rawGold);
         getServer().addRecipe(rawGold_Blast);
         getServer().addRecipe(rawGoldBlock);
         getServer().addRecipe(rawGoldBlock_Blast);
+        getServer().addRecipe(goldOre);
+        getServer().addRecipe(goldOre_Blast);
+        getServer().addRecipe(deepGoldOre);
+        getServer().addRecipe(deepGoldOre_Blast);
 
         getServer().addRecipe(diamond);
         getServer().addRecipe(saddle1);
