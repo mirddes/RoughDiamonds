@@ -1,1 +1,3 @@
+# Disabling this will prevent the plugin from asking a player to download the custom resource pack upon joining the server
+# Note - the custom resource pack is only used to give the Rough Diamonds a unique texture, separate from regular diamonds
 download_resourcepack: true
