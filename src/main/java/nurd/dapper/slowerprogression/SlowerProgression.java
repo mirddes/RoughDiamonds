@@ -220,6 +220,19 @@ public final class SlowerProgression extends JavaPlugin {
         return roughDiamond;
     }
 
+    static public ItemStack GetRoughDiamondItem(int count) {
+        ItemStack roughDiamond = new ItemStack(Material.DIAMOND, count);
+        ItemMeta meta = roughDiamond.getItemMeta();
+
+        meta.setDisplayName(ChatColor.GRAY + "Rough Diamond");
+        ArrayList<String> lore = new ArrayList<String>();
+        lore.add(ChatColor.RED + "Combine with Magma Cream to polish");
+        meta.setLore(lore);
+        meta.setCustomModelData(10170001);
+        roughDiamond.setItemMeta(meta);
+        return roughDiamond;
+    }
+
     public FileConfiguration getCustomConfig() {
         return this.customConfig;
     }
