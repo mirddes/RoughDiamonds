@@ -1,3 +1,25 @@
 # Disabling this will prevent the plugin from asking a player to download the custom resource pack upon joining the server
 # Note - the custom resource pack is only used to give the Rough Diamonds a unique texture, separate from regular diamonds
 download_resourcepack: true
+
+# Disabling this will make smelting ores output a single ingot (vanilla) instead of some number of nuggets. Default: true
+enable_smelting_tweaks: true
+
+# This is the number of nuggets that will be gained from smelting a raw ore. Minimum is 1. Default: 3
+# Recommended: 1 or 3, depending on the difficulty you want.
+# Note - this only applies if the "enable_smelting_tweaks" property is set to true.
+nugget_amount: 3
+
+# Disabling this will revert diamonds to their vanilla state. Default: true
+# If this is disabled after having been used, rough diamonds will be functionally the same as vanilla diamonds. The appearance will not change.
+enable_diamond_tweaks: true
+
+# Disabling this will make it so cows do NOT guarantee a leather on death. Default: true
+enable_cow_drop_tweaks: true
+
+# Disabling this will prevent the recipe tweaks from being applied in game. These are related to iron and attempt to balance it with the limited rates. Default: true
+enable_altered_recipes: true
+
+# Disabling this will no longer give the saddle a recipe for crafting. Default: true
+# This is separated from the "altered recipes" as there is no crafting recipe for saddles in vanilla Minecraft.
+enable_saddle_crafting: true

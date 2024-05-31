@@ -18,17 +18,26 @@ import java.util.Objects;
 
 public class AttemptCraftListener implements Listener {
 
+    SlowerProgression plugin;
+
+    public AttemptCraftListener(SlowerProgression _plugin) {
+        plugin = _plugin;
+    }
+
     @EventHandler
     public void onCrafting(PrepareItemCraftEvent e) {
 //        if (e.getInventory().getResult() == null) return;
         Player player = e.getView().getPlayer() instanceof Player ? ((Player) e.getView().getPlayer()) : null;
         if(player == null) return;
 
+        if(!plugin.getCustomConfig().getBoolean("enable_diamond_tweaks")) return; // Skips this entirely if diamond tweaks are off
+
         int roughDiamondCount = 0;
         int diamondCount = 0;
         int magmaCreamCount = 0;
         CraftingInventory craftingInventory = e.getInventory();
 
+        // loop through each item in the crafting grid to take count of each item there
         for(ItemStack item : craftingInventory.getMatrix()) {
             if(item == null) continue;
             if(item.getItemMeta().hasLore() && item.getItemMeta().getLore().equals(SlowerProgression.GetRoughDiamondItem().getItemMeta().getLore()))

@@ -21,6 +21,12 @@ import java.util.Random;
 
 public class BlockBreakListener implements Listener {
 
+    SlowerProgression plugin;
+
+    public BlockBreakListener(SlowerProgression _plugin) {
+        plugin = _plugin;
+    }
+
     Random rand = new Random();
 
     @EventHandler
@@ -33,7 +39,7 @@ public class BlockBreakListener implements Listener {
 
         Location blockPos = blockBroken.getLocation();
 
-        if(blockBroken.getType().equals(Material.DIAMOND_ORE) || blockBroken.getType().equals(Material.DEEPSLATE_DIAMOND_ORE)) {
+        if(plugin.getCustomConfig().getBoolean("enable_diamond_tweaks") && (blockBroken.getType().equals(Material.DIAMOND_ORE) || blockBroken.getType().equals(Material.DEEPSLATE_DIAMOND_ORE))) {
             Map<Enchantment, Integer> enchantments = player.getInventory().getItemInMainHand().getEnchantments();
             if(enchantments.containsKey(Enchantment.SILK_TOUCH)) return; // If they have silk touch, perform regular drops
 
